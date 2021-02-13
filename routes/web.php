@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\Sample\SampleController;
 use App\Http\Middleware\HelloMiddleware;
 
 /*
@@ -19,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([HelloMiddleware::class])->group(function(){
-    Route::get('/hello', [HelloController::class, 'index']);
-    Route::get('/hello/other', [HelloController::class, 'other']);
+Route::namespace('Sample')->group(function(){
+    Route::get('/sample', [SampleController::class, 'index']);
+    Route::get('/sample/other', [SampleController::class, 'other']);
 });
