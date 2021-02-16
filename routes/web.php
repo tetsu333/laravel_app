@@ -25,4 +25,4 @@ Route::namespace('Sample')->group(function(){
     Route::get('/sample/other', [SampleController::class, 'other']);
 });
 
-Route::get('/hello/{person}', [HelloController::class, 'index']);
+Route::get('/hello', [HelloController::class, 'index']);
