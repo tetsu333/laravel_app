@@ -17,5 +17,5 @@ use App\Http\Middleware\HelloMiddleware;
 */
 
 Route::get('/sample', [SampleController::class, 'index'])->name('sample');
-Route::get('/hello', [HelloController::class, 'index'])->name('hello');
-Route::post('/hello/other', [HelloController::class, 'other']);
+Route::get('/hello', [HelloController::class, 'index']);
+Route::post('/hello', [HelloController::class, 'index']);
