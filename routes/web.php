@@ -17,3 +17,4 @@ use App\Http\Middleware\HelloMiddleware;
 */
 
 Route::get('/hello/{id}', [HelloController::class, 'index']);
+Route::get('/hello', [HelloController::class, 'index']);
